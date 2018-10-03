@@ -10,8 +10,8 @@ class MenuAdminExtension extends Extension
 
     public function updateEditForm($form)
     {
-        $gridField = $form->Fields()->fieldByName('MenuSet');
-
+        $gridField = $form->Fields()->fieldByName(MenuSet::class);
+        
         if($gridField){
 	        $list = $gridField->getList();
 	        $filteredList = $list->filter(array(
